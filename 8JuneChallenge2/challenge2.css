@@ -12,6 +12,46 @@ header {
   text-align: center;
   background-color: plum;
   padding: 20px;
+  border-radius: 5px;
+  animation: colorChange 5s infinite; /* Adjust the duration as needed */
+}
+/* Animation keyframes  with name Anmol*/
+@keyframes colorChange {
+  0% {
+    background: linear-gradient(
+      90deg,
+      rgba(150, 222, 34, 0.555) 0%,
+      rgba(4, 109, 3, 0.26) 53%,
+      rgba(24, 194, 98, 0.286) 100%
+    );
+  }
+
+  25% {
+    background: linear-gradient(
+    90deg,
+    rgba(10, 140, 68, 0.555) 0%,
+    rgba(253, 29, 227, 0.26) 53%,
+    rgba(8, 154, 71, 0.286) 100%
+  );
+  }
+
+  50% {
+    background: linear-gradient(
+    90deg,
+    rgba(241, 20, 175, 0.555) 0%,
+    rgba(67, 149, 197, 0.477) 53%,
+    rgba(106, 29, 79, 0.286) 100%
+  );
+  }
+
+  100% {
+    background: linear-gradient(
+      90deg,
+      rgba(10, 140, 68, 0.555) 0%,
+      rgba(162, 92, 95, 0.26) 53%,
+      rgba(123, 194, 38, 0.286) 100%
+    );
+  }
 }
 
 /*  Selector called as Descendant for divs */
@@ -36,14 +76,16 @@ div.wrapper ul li:nth-child(odd) {
   direction: left;
   height: 120px;
 }
-
+/* gradient effect as per the question instructions*/
 .wrapper {
-  background-image: url('flower.avif');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: linear-gradient(
+    90deg,
+    rgba(241, 20, 175, 0.555) 0%,
+    rgba(67, 149, 197, 0.477) 53%,
+    rgba(106, 29, 79, 0.286) 100%
+  );
   width: 80%;
   margin: 0 auto;
-  background-position: center;
   padding: 2em;
   box-sizing: border-box;
   border: 1px solid #333333;
@@ -146,59 +188,6 @@ h2 {
   }
 }
 
-/* Animation keyframes  with name Anmol*/
-@keyframes anmol {
-  0% {
-    background-color: #845ec2;
-  }
-
-  20% {
-    background-color: #f33058;
-  }
-
-  40% {
-    background-color: #402dee;
-  }
-
-  60% {
-    background-color: #f1d359;
-  }
-
-  80% {
-    background-color: #bc5ec2;
-  }
-
-  100% {
-    background-color: #00e2f7;
-  }
-}
-
-@keyframes changeBg {
-  0% {
-    background-color: rgb(180, 58, 155);
-  }
-
-  20% {
-    background-color: yellow;
-  }
-
-  40% {
-    background-color: rgb(114, 227, 233);
-  }
-
-  60% {
-    background-color: rgb(202, 166, 236);
-  }
-
-  80% {
-    background-color: floralwhite;
-  }
-
-  100% {
-    background-color: rgb(152, 217, 245);
-  }
-}
-
 
 
 /* List Item Styles */
@@ -241,7 +230,8 @@ ul li:hover::before {
   opacity: 1;
 }
 
-/* footer styling in form of a grid pattern*/
+/* footer styling in form of a grid pattern
+Along with the gradient effect as per the instruction two of the asignment*/
 footer>p {
   font-weight: bold;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -249,19 +239,44 @@ footer>p {
   grid-area: footer;
   padding: 2em;
   text-align: center;
-  background-color: plum;
+  background: linear-gradient(
+    90deg,
+    rgba(10, 140, 68, 0.555) 0%,
+    rgba(253, 29, 227, 0.26) 53%,
+    rgba(8, 154, 71, 0.286) 100%
+  );
   color: #333;
 }
 
+/* image filter with transitions*/
 #my-image {
   filter: contrast(130%) brightness(100%) saturate(130%);
   transition: filter 0.5s ease-in-out;
   max-width: 100%;
-  height: 50vh;
-  max-width: 100%;
+  height: auto;
 }
 
-/* Media queries for responsiveness */
+/* image hover effects*/
+#my-image:hover {
+  filter: contrast(100%) brightness(100%) saturate(100%);
+  animation: pixelate 0.5s infinite;
+}
+
+@keyframes pixelate {
+  0% {
+    filter: contrast(100%) brightness(100%) saturate(100%);
+  }
+
+  50% {
+    filter: contrast(120%) brightness(120%) saturate(120%) grayscale(100%);
+  }
+
+  100% {
+    filter: contrast(100%) brightness(100%) saturate(100%);
+  }
+}
+
+/* Media queries for responsiveness (not mentioned in the instructions but did this additionally from my side for making it more responsive) */
 @media screen and (max-width: 768px) {
   #my-image {
     width: 80%;
