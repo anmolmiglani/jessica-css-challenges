@@ -1,0 +1,236 @@
+/* Typography */ 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100% !important;
+    height: 100vh;
+    animation: anmol 10s linear infinite;
+    background-color: wheat;
+  }
+  /* A kind of animation effects using keyframes*/
+  @keyframes anmol {
+    0% {
+      background-color: #845ec2;
+    }
+    25% {
+      background-color: palegreen;
+    }
+    50% {
+      background-color: lightcoral;
+    }
+    75% {
+      background-color: #f1d359;
+    }
+    100% {
+      background-color: rosybrown;
+    }
+  }
+html {
+    font-family: 'Fira Sans', sans-serif; 
+    scroll-behavior: smooth;
+}
+header > h1  {
+    text-align: center;
+    width: 100%;
+    margin: 20px 0;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5em;
+}
+
+h1, h2, h3 {
+    font-weight: 600; 
+}
+
+p {
+    font-weight: 300; 
+    line-height: 18px; 
+}
+
+/* Marquee a moving tag which really dont comes under css but it enhances the creativity according to me*/
+.marquee h1 {
+    animation: rotate 5s linear infinite;
+    display: inline-block;
+} 
+
+/* Layout */ 
+
+.wrapper {
+    width: 80%; 
+    margin: 0 auto; 
+}
+
+.flex {
+    display:flex;
+    gap: 32px;  
+}
+
+#features > div {
+    flex: 1; 
+}
+
+img {
+    max-height: 300px; 
+    width: auto; 
+}
+
+main section {
+    padding: 60px 20px 0 20px; 
+}
+/* Table Styling */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Zebra Striped Pattern for Playlist Table */
+.playlist-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Table Header  */
+th {
+    background-color: #f5f5f5;
+}
+
+/* Table Hover Effects */
+tr:hover {
+    background-color: mediumorchid;
+color: #333;
+background: linear-gradient(
+  90deg,
+  rgba(131, 58, 180, 0.5551470588235294) 0%,
+  rgba(29, 225, 253, 0.4767156862745098) 53%,
+  rgba(245, 252, 69, 0.2862394957983193) 100%
+);
+}
+
+.nav-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: mediumorchid;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover 
+{
+background-color: #0062cc;
+color: #333;
+background: linear-gradient(
+  90deg,
+  rgba(131, 58, 180, 0.5551470588235294) 0%,
+  rgba(29, 225, 253, 0.4767156862745098) 53%,
+  rgba(245, 252, 69, 0.2862394957983193) 100%
+);
+}
+
+  /* Links effects using css */
+ 
+.animated-link {
+    position: relative;
+    display: inline-block;
+    color: red;
+    text-decoration: none;
+    overflow: hidden;
+    background-color: yellow;
+}
+
+.animated-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    background-color: #4CAF50;
+    transition: width 0.3s;
+}
+
+.animated-link:hover::before {
+    width: 100%;
+}
+
+            
+            /* List stylings by me */
+            
+            
+            /* Ordered List animations */
+            ol li {
+                counter-increment: my-counter;
+                padding: 10px;
+                margin-bottom: 10px;
+                font-size: 18px;
+                line-height: 1.5;
+                background-color: #f5f5f5;
+                border-radius: 10%;
+            }
+            
+            /* Unordered List Styles */
+            ul li {
+                position: relative;
+                padding: 10px;
+                margin-bottom: 10px;
+                font-size: 18px;
+                line-height: 1.5;
+                background-color: #f5f5f5;
+                border-radius: 10%;
+            }
+            
+            ul li::before {
+                content: "";
+                position: absolute;
+                left: -20px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 10px;
+                height: 10px;
+                background-color: #4CAF50;
+                border-radius: 50%;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+            
+            /* List Item Hover Styling*/
+            li:hover {
+                background-color: yellow;
+                color: #333;
+            }
+            
+            ol li:hover::before,
+            ul li:hover::before {
+                opacity: 1;
+            }
+            
+            @keyframes color-cycle {
+                0% {
+                    background-color: cyan;
+                }
+                50% {
+                    background-color: #4CAF50;
+                }
+                100% {
+                    background-color: orchid;
+                }
+            }
+            /* footer styling*/
+            footer > p {
+                font-weight: bold;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                margin-top: 20px;
+                grid-area: footer;
+                padding: 2em;
+                text-align: center;
+                background-color: wheat;
+            }
+
+
+ 

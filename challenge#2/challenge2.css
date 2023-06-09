@@ -1,0 +1,290 @@
+/* styling selectors for identifications*/
+/* Type Selector */
+body {
+  font-family: Arial, sans-serif;
+  color: #333333;
+  margin: 0;
+}
+
+header {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: plum;
+  padding: 20px;
+  border-radius: 5px;
+  animation: colorChange 5s infinite; /* Adjust the duration as needed */
+}
+/* Animation keyframes  with name Anmol*/
+@keyframes colorChange {
+  0% {
+    background: linear-gradient(
+      90deg,
+      rgba(150, 222, 34, 0.555) 0%,
+      rgba(4, 109, 3, 0.26) 53%,
+      rgba(24, 194, 98, 0.286) 100%
+    );
+  }
+
+  25% {
+    background: linear-gradient(
+    90deg,
+    rgba(10, 140, 68, 0.555) 0%,
+    rgba(253, 29, 227, 0.26) 53%,
+    rgba(8, 154, 71, 0.286) 100%
+  );
+  }
+
+  50% {
+    background: linear-gradient(
+    90deg,
+    rgba(241, 20, 175, 0.555) 0%,
+    rgba(67, 149, 197, 0.477) 53%,
+    rgba(106, 29, 79, 0.286) 100%
+  );
+  }
+
+  100% {
+    background: linear-gradient(
+      90deg,
+      rgba(10, 140, 68, 0.555) 0%,
+      rgba(162, 92, 95, 0.26) 53%,
+      rgba(123, 194, 38, 0.286) 100%
+    );
+  }
+}
+
+/*  Selector called as Descendant for divs */
+div.wrapper ul li {
+  color: #333333;
+}
+
+/* Pseudo-class Selector */
+div.wrapper ul li:nth-child(odd) {
+  font-weight: bold;
+}
+
+/* ID Selector */
+#background-style {
+  background-color: #f1f1f1;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/*  Class Selector  "Adding marquees with animations"  */
+.marquee {
+  direction: left;
+  height: 120px;
+}
+/* gradient effect as per the question instructions*/
+.wrapper {
+  background: linear-gradient(
+    90deg,
+    rgba(241, 20, 175, 0.555) 0%,
+    rgba(67, 149, 197, 0.477) 53%,
+    rgba(106, 29, 79, 0.286) 100%
+  );
+  width: 80%;
+  margin: 0 auto;
+  padding: 2em;
+  box-sizing: border-box;
+  border: 1px solid #333333;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fade-in 5s forwards;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slide-up 5s forwards;
+}
+
+div.wrapper {
+  width: 80vw;
+  background-color: #f2f2f2;
+  border: 2px solid #333333;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.image-container {
+  display: flex;
+}
+
+.image-container img {
+  width: 400px;
+  margin-right: 1em;
+  margin-left: 1em;
+}
+
+ul {
+  margin-top: 20px;
+  padding-left: 40px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.2em;
+  line-height: 1.4em;
+  margin-left: 1em;
+}
+
+h3 {
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.5);
+  animation: poping-up 10s cubic-bezier(0.68, -0.6, 0.32, 1.6) infinite alternate;
+  color: #333;
+}
+
+h2 {
+  margin-left: 1em;
+}
+
+/* Animation Keyframes */
+@keyframes poping-up {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+
+
+/* List Item Styles */
+li {
+  position: relative;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 1.5;
+  background-color: #f5f5f5;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+/* Unordered List Styles */
+ul li {
+  position: relative;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* List Item Hover Styling */
+li:hover {
+  background-color: plum;
+  color: #333;
+}
+
+ul li:hover::before {
+  opacity: 1;
+}
+
+/* footer styling in form of a grid pattern
+Along with the gradient effect as per the instruction two of the asignment*/
+footer>p {
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-top: 20px;
+  grid-area: footer;
+  padding: 2em;
+  text-align: center;
+  background: linear-gradient(
+    90deg,
+    rgba(10, 140, 68, 0.555) 0%,
+    rgba(253, 29, 227, 0.26) 53%,
+    rgba(8, 154, 71, 0.286) 100%
+  );
+  color: #333;
+}
+
+/* image filter with transitions*/
+#my-image {
+  filter: contrast(130%) brightness(100%) saturate(130%);
+  transition: filter 0.5s ease-in-out;
+  max-width: 100%;
+  height: auto;
+}
+
+/* image hover effects*/
+#my-image:hover {
+  filter: contrast(100%) brightness(100%) saturate(100%);
+  animation: pixelate 0.5s infinite;
+}
+
+@keyframes pixelate {
+  0% {
+    filter: contrast(100%) brightness(100%) saturate(100%);
+  }
+
+  50% {
+    filter: contrast(120%) brightness(120%) saturate(120%) grayscale(100%);
+  }
+
+  100% {
+    filter: contrast(100%) brightness(100%) saturate(100%);
+  }
+}
+
+/* Media queries for responsiveness (not mentioned in the instructions but did this additionally from my side for making it more responsive) */
+@media screen and (max-width: 768px) {
+  #my-image {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #my-image {
+    width: 100%;
+  }
+}
