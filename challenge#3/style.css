@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  header {
+    /* Add styling for the header */
+    text-align: center; /* Align the text at the center */
+    margin: 20px 0; /* Add some top and bottom margin */
+  }
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-end; /* Align main content to the right */
+  }
+  
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 50%; /* To make the image and box take half of the available space */
+    max-width: 50%;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .content-box {
+    /* Styling for the box containing the paragraph */
+  }
+  
+  .row {
+    display: flex;
+    gap: 20px;
+    flex: 1; /* To make the row take the remaining space */
+  }
+  
+  .column {
+    flex: 1; /* To make all columns equal in size */
+  }
+  
+  .column1 {
+    flex: 2; /* To make the first column twice the width of the second and third */
+  }
+  
+  .column2, .column3 {
+    flex: 1;
+  }
+  
+  footer {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .footer-column {
+    flex: 1; /* To distribute columns equally */
+  }
+  
