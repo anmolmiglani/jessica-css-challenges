@@ -1,0 +1,171 @@
+/* body styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/*Nav Bar*/
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: #4d4d4d;
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+  margin-left: 10%;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+/* HEADER */
+
+header {
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 50px 0;
+  height: 300px;
+}
+
+/*header buttons*/
+
+.button-one {
+  color: white;
+  background-color: blue;
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.button-two {
+  color: white;
+  background-color: grey;
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+main {
+  background-color: #e0e0e0;
+}
+
+/*product cards*/
+
+.card-grid {
+  display: grid; /*grid system*/
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  justify-items: center;
+}
+
+.card {
+  display: flex; /*flexbox*/
+  flex-direction: column;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+}
+
+.card p {
+  text-align: start;
+  margin-bottom: 10px;
+}
+
+.btn-group button {
+  background-color: white;
+  border: 1px solid grey;
+  color: grey;
+  padding: 5px 15px;
+  cursor: pointer;
+  float: left;
+  border-radius: 0px;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none;
+}
+
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:hover {
+  background-color: grey;
+  color: white;
+}
+
+.card .time {
+  color: gray;
+  margin-top: -23px;
+  text-align: right;
+}
+/* footer styling */
+footer {
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+#top {
+  position: absolute;
+  top: 0;
+}
+
+.back-to-top {
+  margin-top: -30px;
+  color: blue;
+  float: right;
+  margin-right: 30px;
+}

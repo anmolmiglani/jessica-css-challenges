@@ -1,0 +1,282 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.navbar {
+  background-color: rgb(33, 37, 41);
+}
+
+.navbar-height-down {
+  animation: slideDown 0.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+.navbar-height-up {
+  animation: slideUp 0.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    min-height: 0px;
+  }
+
+  to {
+    min-height: 200px;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    min-height: 200px;
+  }
+
+  to {
+    min-height: 0px;
+  }
+}
+
+.desc,
+.top {
+  width: 90%;
+  margin: auto;
+}
+
+.desc {
+  height: 0px;
+  overflow: hidden;
+  display: flex;
+  /* padding: 15px 0px;*/
+  justify-content: space-between;
+}
+
+.desc .left-desc {
+  color: gray;
+  flex-basis: 80%;
+}
+
+.left-desc h2 {
+  color: white;
+  font-size: 30px;
+}
+
+.left-desc p {
+  max-width: 800px;
+}
+
+.desc .right-desc {
+  color: white;
+  flex-basis: 20%;
+}
+
+.right-desc ul {
+  padding: 0px;
+}
+
+.right-desc li {
+  list-style-type: none;
+  margin-bottom: 3px;
+}
+
+.right-desc li a {
+  color: white;
+}
+
+.navbar .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  color: white;
+  font-size: 30px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 15px 0px;
+  color: white;
+}
+
+.btn {
+  background-color: transparent;
+  outline: none;
+  border: 0px;
+}
+
+.header {
+  padding: 120px;
+  text-align: center;
+}
+
+.header h2 {
+  font-weight: 300;
+  font-size: 50px;
+  margin: 5px;
+}
+
+.header p {
+  font-size: 20px;
+  width: 600px;
+  margin: 15px auto;
+}
+
+.btn-primary {
+  border: none;
+  background-color: #0d6efd;
+  padding: 10px 25px;
+  border-radius: 5px;
+  color: white;
+}
+
+.btn-secondary {
+  border: none;
+  background-color: grey;
+  padding: 10px 25px;
+  border-radius: 5px;
+  color: white;
+}
+
+.bg-light {
+  background-color: rgb(248, 249, 250);
+  padding: 5px;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 10px;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.col {
+  flex-basis: 33.33%;
+  margin: 10px;
+}
+
+.card-body,
+.card-footer {
+  padding: 10px;
+
+}
+
+.card-footer {
+  display: flex;
+  color: grey;
+}
+
+.time {
+  margin-left: auto;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 50px; */
+}
+
+.footer .fleft {
+  font-size: 20px;
+  color: rgb(71, 71, 71);
+}
+
+.footer .fright {
+  font-size: 20px;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 756px) {
+  .desc {
+    flex-direction: column;
+  }
+
+  .left-desc,
+  .right-desc {
+    flex-basis: 100%;
+  }
+
+  @keyframes slideDown {
+    from {
+      min-height: 0px;
+    }
+
+    to {
+      min-height: 350px;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      min-height: 350px;
+    }
+
+    to {
+      min-height: 0px;
+    }
+  }
+
+  .header {
+    padding: 30px;
+  }
+
+  .header h2 {
+    font-size: 30px;
+  }
+
+  .header p {
+    font-size: 16px;
+    /* overflow: hidden; */
+    width: 100%;
+    padding: 0px;
+  }
+
+  .header button {
+    display: block;
+    margin: 10px auto;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .col {
+    flex-basis: 100%;
+  }
+
+  .footer {
+    margin-bottom: 20px;
+    grid-template-columns: auto;
+  }
+}
