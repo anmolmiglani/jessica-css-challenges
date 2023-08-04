@@ -135,6 +135,16 @@ main {
     padding: 20px;
     gap: 10px;
   }
+  /* The sidebar joins the responsive party */
+  .sidebar {
+    background-color: #333;
+    border: 5px solid #000;
+    padding: 0.5em 1em;
+    color: #fff;
+    flex: 0.5;
+    border-radius: 5px;
+    flex: 0 0 20%;
+  }
 
   .cards {
     list-style: none;
@@ -162,16 +172,5 @@ main {
   /* The card's inner retains its comfortable padding */
   .cards .inner {
     padding: 0.5em 1em;
-  }
-
-  /* The sidebar joins the responsive party */
-  .sidebar {
-    background-color: #333;
-    border: 5px solid #000;
-    padding: 0.5em 1em;
-    color: #fff;
-    flex: 0.5;
-    border-radius: 5px;
-    flex: 0 0 20%;
   }
 }
