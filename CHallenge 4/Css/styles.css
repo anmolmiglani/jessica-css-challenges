@@ -1,0 +1,180 @@
+/* Base Styles */
+
+/* Set box sizing for all elements to include borders in dimensions */
+* {
+  box-sizing: border-box;
+}
+
+/* Define base font and line height for the entire HTML document */
+html {
+  font: 1.2em/1.4 Arial, Helvetica, sans-serif;
+}
+
+/* Add padding at the bottom of the body */
+body {
+  padding: 0 0 1em;
+}
+
+/* Styling for the header section */
+header {
+  background-color: #333;
+  color: #fff;
+  border: 5px solid #000;
+}
+
+/* Remove default list styles and spacing for the header unordered list */
+header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling for links within the header */
+header a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 0.5em 1em;
+  border-top: 1px solid #999;
+}
+
+/* Styling for the title within the header */
+header .title {
+  font-size: 150%;
+  font-style: italic;
+  font-weight: bold;
+  padding: 1em;
+}
+
+/* Styling for the main content area */
+main {
+  padding: 0 1em;
+}
+
+/* Remove list styles and spacing for a list of cards */
+.cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling for individual card items */
+.cards li {
+  border: 5px solid #000;
+  margin-bottom: 1em;
+}
+
+/* Styling for headings within cards */
+.cards h2 {
+  background-color: #333;
+  color: #fff;
+  margin: 0;
+  padding: 0.5em 1em;
+}
+
+/* Styling for the inner content of cards */
+.cards .inner {
+  padding: 0.5em 1em;
+}
+
+/* Styling for the sidebar section */
+.sidebar {
+  background-color: #333;
+  border: 5px solid #000;
+  padding: 0.5em 1em;
+  color: #fff;
+}
+
+/* Responsive Styles */
+
+/* Media query for screens with a minimum width of 767px */
+@media (min-width: 767px) {
+  /* Adjust styling for the header in larger screens */
+  header {
+      background-color: #333;
+      color: #fff;
+      border: 5px solid #000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  /* Update list styling and spacing for the header unordered list */
+  header ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+  }
+
+  /* Adjust spacing between list items in the header */
+  header ul li {
+      margin-left: 20px;
+  }
+
+  /* Update styling for links within the header */
+  header a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      padding: 0.5em 1em;
+  }
+
+  /* Adjust styling for the title within the header */
+  header .title {
+      font-size: 150%;
+      font-style: italic;
+      font-weight: bold;
+      padding: 1em;
+  }
+
+  /* Adjust main content layout for larger screens */
+  main {
+      padding: 0 1em;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      gap: 10px;
+  }
+
+  /* Update list styling and layout for cards in larger screens */
+  .cards {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      flex: 0 0 80%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+  }
+
+  /* Adjust styling for individual card items */
+  .cards li {
+      border: 5px solid #000;
+      margin-bottom: 1em;
+  }
+
+  /* Update styling for headings within cards */
+  .cards h2 {
+      background-color: #333;
+      color: #fff;
+      margin: 0;
+      padding: 0.5em 1em;
+  }
+
+  /* Adjust styling for the inner content of cards */
+  .cards .inner {
+      padding: 0.5em 1em;
+  }
+
+  /* Adjust styling for the sidebar section in larger screens */
+  .sidebar {
+      background-color: #333;
+      border: 5px solid #000;
+      padding: 0.5em 1em;
+      color: #fff;
+      flex: 0.5;
+      border-radius: 5px;
+      flex: 0 0 20%;
+  }
+}
