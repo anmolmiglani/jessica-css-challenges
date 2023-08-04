@@ -1,0 +1,177 @@
+/* Base Styles */
+
+/* Let's rock the box-sizing to include borders within dimensions */
+* {
+  box-sizing: border-box;
+}
+
+/* Making text look fancy and stylish, like a well-dressed font model */
+html {
+  font: 1.2em/1.4 Arial, Helvetica, sans-serif;
+}
+
+/* Giving some breathing space at the bottom of  page */
+body {
+  padding: 0 0 1em;
+}
+
+/* The  header: where colors and borders meet  */
+header {
+  background-color: #333;
+  color: #fff;
+  border: 5px solid #000;
+}
+
+header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Links in the header */
+header a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 0.5em 1em;
+  border-top: 1px solid #999;
+}
+
+/* The title: italics and boldness combined */
+header .title {
+  font-size: 150%;
+  font-style: italic;
+  font-weight: bold;
+  padding: 1em;
+}
+
+/* The main stage: where the content takes center spotlight */
+main {
+  padding: 0 1em;
+}
+
+/* The cards */
+.cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Each card by a solid border */
+.cards li {
+  border: 5px solid #000;
+  margin-bottom: 1em;
+}
+
+/* The card title */
+.cards h2 {
+  background-color: #333;
+  color: #fff;
+  margin: 0;
+  padding: 0.5em 1em;
+}
+
+/* The card's inner sanctum:  padding for  precious content */
+.cards .inner {
+  padding: 0.5em 1em;
+}
+
+/* The sidebar: standing by  content's side */
+.sidebar {
+  background-color: #333;
+  border: 5px solid #000;
+  padding: 0.5em 1em;
+  color: #fff;
+}
+
+/* Responsive Styles */
+
+/* When screens go big: adjusting  styles to shine even brighter */
+
+@media (min-width: 767px) {
+  /* The header takes on a grander form */
+  header {
+    background-color: #333;
+    color: #fff;
+    border: 5px solid #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* The header list transforms  */
+  header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  header ul li {
+    margin-left: 20px;
+  }
+
+  /* Links in the header  */
+  header a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 0.5em 1em;
+  }
+
+  /* The title stands even taller */
+  header .title {
+    font-size: 150%;
+    font-style: italic;
+    font-weight: bold;
+    padding: 1em;
+  }
+
+  /* The main content flexes its muscles, embracing the extra space */
+  main {
+    padding: 0 1em;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .cards {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 0 0 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+
+  /* Each card maintains its bold border*/
+  .cards li {
+    border: 5px solid #000;
+    margin-bottom: 1em;
+  }
+
+  .cards h2 {
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+    padding: 0.5em 1em;
+  }
+
+  /* The card's inner retains its comfortable padding */
+  .cards .inner {
+    padding: 0.5em 1em;
+  }
+
+  /* The sidebar joins the responsive party */
+  .sidebar {
+    background-color: #333;
+    border: 5px solid #000;
+    padding: 0.5em 1em;
+    color: #fff;
+    flex: 0.5;
+    border-radius: 5px;
+    flex: 0 0 20%;
+  }
+}
